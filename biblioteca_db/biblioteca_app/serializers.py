@@ -12,9 +12,14 @@ class EditorialSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class LibroSerializer(serializers.ModelSerializer):
+    autor = serializers.PrimaryKeyRelatedField(queryset=Autor.objects.all())
+    editorial = serializers.PrimaryKeyRelatedField(queryset=Editorial.objects.all())
+    autor_nombre = serializers.CharField(source='autor.__str__', read_only=True)
+    editorial_nombre = serializers.CharField(source='editorial.__str__', read_only=True)
+
     class Meta:
         model = Libro
-        fields = "__all__"
+        fields = ['id','titulo','resumen','isbn','anio_publicacion','autor','editorial','autor_nombre','editorial_nombre']
 
 class MiembroSerializer(serializers.ModelSerializer):
     class Meta:
