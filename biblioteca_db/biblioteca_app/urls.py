@@ -1,16 +1,24 @@
-from django.contrib import admin
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from biblioteca_app.views import AutorViewSet, EditorialViewSet, LibroViewSet, MiembroViewSet, PrestamoViewSet
-
-router = DefaultRouter()
-router.register(r'autores', AutorViewSet)
-router.register(r'editoriales', EditorialViewSet)
-router.register(r'libros', LibroViewSet)
-router.register(r'miembros', MiembroViewSet)
-router.register(r'prestamos', PrestamoViewSet)
+from django.urls import path
+from .views import AutorList, AutorDetail, EditorialList, EditorialDetail, LibroList, LibroDetail, MiembroList, MiembroDetail, PrestamoList, PrestamoDetail
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    # Autores
+    path('autores/', AutorList.as_view(), name='autor-list'),
+    path('autores/<int:pk>/', AutorDetail.as_view(), name='autor-detail'),
+
+    # Editoriales
+    path('editoriales/', EditorialList.as_view(), name='editorial-list'),
+    path('editoriales/<int:pk>/', EditorialDetail.as_view(), name='editorial-detail'),
+
+    # Libros
+    path('libros/', LibroList.as_view(), name='libro-list'),
+    path('libros/<int:pk>/', LibroDetail.as_view(), name='libro-detail'),
+
+    # Miembros
+    path('miembros/', MiembroList.as_view(), name='miembro-list'),
+    path('miembros/<int:pk>/', MiembroDetail.as_view(), name='miembro-detail'),
+
+    # Préstamos
+    path('prestamos/', PrestamoList.as_view(), name='prestamo-list'),
+    path('prestamos/<int:pk>/', PrestamoDetail.as_view(), name='prestamo-detail'),
 ]
