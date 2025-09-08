@@ -1,0 +1,2238 @@
+{
+	"info": {
+		"_postman_id": "86c3edec-92f9-4211-9309-1b389a1bb5ed",
+		"name": "Biblioteca",
+		"description": "StartFragment\n\n## BASE URL\n\n```\nhttp://localhost:8000/api/\n\n ```\n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43885560",
+		"_collection_link": "https://laura-2526204.postman.co/workspace/23088b66-552a-4e5b-8109-9a4377ce9463/collection/43885560-86c3edec-92f9-4211-9309-1b389a1bb5ed?action=share&source=collection_link&creator=43885560"
+	},
+	"item": [
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n{{urls}}/autores/\n\n- **Endpoint:** `GET /autores/`\n    \n- **Descripción:** Devuelve todos los autores registrados.\n    \n- **Parámetros:** Ninguno  \n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/autores/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"autores",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Sep 2025 23:21:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1066"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Gabriel\",\n        \"apellido\": \"García Márquez\",\n        \"biografia\": \"Fue un escritor, periodista y guionista colombiano, galardonado con el Premio Nobel de Literatura en 1982, conocido por obras como Cien años de soledad y considerado un exponente fundamental del realismo mágico y del boom latinoamericano. Nació en Arataca, Colombia, en 1927, y murió en la Ciudad de México en 2014, donde vivió gran parte de su vida y creó su obra más célebre.\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Isabel\",\n        \"apellido\": \"Allende\",\n        \"biografia\": \"Escritora chilena-estadounidense conocida por novelas como 'La casa de los espíritus'. Una de las novelistas de lengua española más leídas del mundo.\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Mario\",\n        \"apellido\": \"Vargas Llosa\",\n        \"biografia\": \"Escritor peruano, Premio Nobel de Literatura 2010. Destacado por novelas como 'La ciudad y los perros' y 'Conversación en La Catedral'.\"\n    },\n    {\n        \"id\": 4,\n        \"nombre\": \"Yuval Noah\",\n        \"apellido\": \"Harari\",\n        \"biografia\": \"Historiador israelí, autor de bestsellers como 'Sapiens' y 'Homo Deus'. Profesor en la Universidad Hebrea de Jerusalén.\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **Endpoint:** `POST /autores/`\n    \n- **Descripción:** Crea un nuevo autor.\n    \n- **Parámetros Body (JSON):**\n    \n    - `nombre` _(string, requerido)_\n        \n    - `apellido` _(string, requerido)_\n        \n    - `biografia` _(string, opcional)_\n        \n\n**Errores posibles:**\n\n- **400 Bad Request:** Datos inválidos o campos requeridos faltantes\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Crear",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"J.K.\",\r\n    \"apellido\": \"Rowling\",\r\n    \"biografia\": \"Escritora británica, creadora de la serie Harry Potter. Una de las autoras más exitosas de la historia, sus libros han vendido más de 500 millones de copias mundialmente.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/autores/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"autores",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Sep 2025 23:47:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 7,\n    \"nombre\": \"J.K.\",\n    \"apellido\": \"Rowling\",\n    \"biografia\": \"Escritora británica, creadora de la serie Harry Potter. Una de las autoras más exitosas de la historia, sus libros han vendido más de 500 millones de copias mundialmente.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `PUT /api/autores/{id}/`\n    \n- **Descripción:** Actualiza todos los campos de un autor existente\n    \n- **Parámetros de URL:**\n    \n    - `id`: ID del autor (entero)\n        \n\n- **Respuesta exitosa (200):** Devuelve el autor actualizado\n    \n- **Errores posibles:**\n    \n    - **400 Bad Request:** Datos inválidos\n        \n    - **404 Not Found:** Autor no encontrado\n        \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Actualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"J.K. Corregido\",\r\n    \"apellido\": \"Rowling\",\r\n    \"biografia\": \"Escritora británica, creadora de la serie Harry Potter. Una de las autoras más exitosas de la historia, sus libros han vendido más de 500 millones de copias mundialmente.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/autores/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"autores",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Sep 2025 23:52:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 7,\n    \"nombre\": \"J.K. Corregido\",\n    \"apellido\": \"Rowling\",\n    \"biografia\": \"Escritora británica, creadora de la serie Harry Potter. Una de las autoras más exitosas de la historia, sus libros han vendido más de 500 millones de copias mundialmente.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `DELETE /api/autores/{id}/`\n    \n- **Descripción:** Elimina un autor del sistema\n    \n- **Parámetros de URL:**\n    \n    - `id`: ID del autor (entero)\n        \n- **Respuesta exitosa (204):** Sin contenido\n    \n- **Errores posibles:**\n    \n    - **404 Not Found:** Autor no encontrado\n        \n    - **Restricción:** No se puede eliminar si tiene libros asociados\n        \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Eliminar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/autores/6/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"autores",
+										"6",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Editoriales",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n{{urls}}/editoriales/\n\n- **URL:** `GET /api/editoriales/`\n    \n- **Descripción:** Obtiene una lista de todas las editoriales registradas\n    \n- **Parámetros de consulta opcionales:**\n    \n    - `search`: Buscar por nombre (ej: `?search=planeta`)\n        \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/editoriales/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"editoriales",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Sep 2025 23:38:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "468"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"nombre\": \"Planeta\",\n        \"direccion\": \"Av. Diagonal 662-664, Barcelona, España\",\n        \"telefono\": \"+34 93 492 80 00\"\n    },\n    {\n        \"id\": 2,\n        \"nombre\": \"Penguin Random House\",\n        \"direccion\": \"1745 Broadway, New York, NY 10019, USA\",\n        \"telefono\": \"+1 212 782 9000\"\n    },\n    {\n        \"id\": 3,\n        \"nombre\": \"Alfaguara\",\n        \"direccion\": \"Calle Torrelaguna 60, Madrid, España\",\n        \"telefono\": \"+34 91 744 90 60\"\n    },\n    {\n        \"id\": 4,\n        \"nombre\": \"Debate\",\n        \"direccion\": \"Travessera de Gràcia 47-49, Barcelona, España\",\n        \"telefono\": \"+34 93 366 03 00\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `POST /api/editoriales/`\n    \n- **Descripción:** Crea una nueva editorial en el sistema\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Crear",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"RBA Libros\",\r\n    \"direccion\": \"Diagonal 189, Barcelona, España\",\r\n    \"telefono\": \"+34 93 217 00 88\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/editoriales/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"editoriales",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Sep 2025 23:55:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 6,\n    \"nombre\": \"RBA Libros\",\n    \"direccion\": \"Diagonal 189, Barcelona, España\",\n    \"telefono\": \"+34 93 217 00 88\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `PUT /api/editoriales/{id}/`\n    \n- **Descripción:** Actualiza todos los campos de una editorial existente\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Debolsillo B E\",\r\n    \"direccion\": \"Travessera de Gràcia 47-49, Barcelona, España\",\r\n    \"telefono\": \"+34 93 366 03 15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/editoriales/5/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"editoriales",
+										"5",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Sep 2025 23:42:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "126"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 5,\n    \"nombre\": \"Debolsillo B E\",\n    \"direccion\": \"Travessera de Gràcia 47-49, Barcelona, España\",\n    \"telefono\": \"+34 93 366 03 15\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `DELETE /api/editoriales/{id}/`\n    \n- **Descripción:** Elimina una editorial del sistema\n    \n- **Restricción:** No se puede eliminar si tiene libros asociados\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/editoriales/4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"editoriales",
+										"4",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Libros",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n{{urls}}/libros/\n\n- **URL:** `GET /api/libros/`\n    \n- **Descripción:** Obtiene una lista de todos los libros con información de autor y editorial\n    \n- **Parámetros de consulta opcionales:**\n    \n    - `autor`: Filtrar por ID de autor (ej: `?autor=1`)\n        \n    - `editorial`: Filtrar por ID de editorial (ej: `?editorial=2`)\n        \n    - `autor_nombre`: Filtrar por nombre de autor (ej: `?autor_nombre=garcia`)\n        \n    - `editorial_nombre`: Filtrar por nombre de editorial (ej: `?editorial_nombre=planeta`)\n        \n    - `search`: Buscar en título, ISBN, autor o editorial\n        \n    - `ordering`: Ordenar por campo (`titulo`, `anio_publicacion`, `-titulo`)\n        \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libros/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libros",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:01:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1470"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"Cien años de soledad\",\n        \"resumen\": \"La historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo. Una obra maestra del realismo mágico que narra la soledad, el amor y la historia de América Latina.\",\n        \"isbn\": \"9788497592208\",\n        \"anio_publicacion\": 1967,\n        \"autor\": 1,\n        \"editorial\": 1,\n        \"autor_nombre\": \"Gabriel García Márquez\",\n        \"editorial_nombre\": \"Planeta\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"El amor en los tiempos del cólera\",\n        \"resumen\": \"La historia de amor entre Florentino Ariza y Fermina Daza, que se extiende por más de cincuenta años. Una reflexión sobre el amor, el tiempo y la persistencia.\",\n        \"isbn\": \"9788497592215\",\n        \"anio_publicacion\": 1985,\n        \"autor\": 1,\n        \"editorial\": 2,\n        \"autor_nombre\": \"Gabriel García Márquez\",\n        \"editorial_nombre\": \"Penguin Random House\"\n    },\n    {\n        \"id\": 3,\n        \"titulo\": \"La casa de los espíritus\",\n        \"resumen\": \"La saga de la familia del Trueba a través de cuatro generaciones de mujeres. Una novela que mezcla lo político y lo mágico en el Chile del siglo XX.\",\n        \"isbn\": \"9788490628454\",\n        \"anio_publicacion\": 1982,\n        \"autor\": 2,\n        \"editorial\": 3,\n        \"autor_nombre\": \"Isabel Allende\",\n        \"editorial_nombre\": \"Alfaguara\"\n    },\n    {\n        \"id\": 4,\n        \"titulo\": \"La ciudad y los perros\",\n        \"resumen\": \"Novela ambientada en el Colegio Militar Leoncio Prado de Lima. Retrato crudo de la violencia, el machismo y la corrupción en la sociedad peruana.\",\n        \"isbn\": \"9788432248456\",\n        \"anio_publicacion\": 1963,\n        \"autor\": 3,\n        \"editorial\": 3,\n        \"autor_nombre\": \"Mario Vargas Llosa\",\n        \"editorial_nombre\": \"Alfaguara\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `POST /api/libros/`\n    \n- **Descripción:** Crea un nuevo libro en el sistema\n    \n- **Errores posibles:**\n    \n    - **400 Bad Request:** ISBN duplicado, autor o editorial no existe\n        \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Crear",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"Harry Potter y la Piedra Filosofal\",\r\n    \"resumen\": \"Harry Potter descubre en su undécimo cumpleaños que es hijo de dos magos y que él también posee poderes mágicos. En Hogwarts hará amigos entrañables y vivirá aventuras increíbles.\",\r\n    \"isbn\": \"9788498383638\",\r\n    \"anio_publicacion\": 1997,\r\n    \"autor\": 7,\r\n    \"editorial\": 6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libros/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libros",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:05:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "398"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 7,\n    \"titulo\": \"Harry Potter y la Piedra Filosofal\",\n    \"resumen\": \"Harry Potter descubre en su undécimo cumpleaños que es hijo de dos magos y que él también posee poderes mágicos. En Hogwarts hará amigos entrañables y vivirá aventuras increíbles.\",\n    \"isbn\": \"9788498383638\",\n    \"anio_publicacion\": 1997,\n    \"autor\": 7,\n    \"editorial\": 6,\n    \"autor_nombre\": \"J.K. Corregido Rowling\",\n    \"editorial_nombre\": \"RBA Libros\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `PUT /api/libros/{id}/`\n    \n- **Descripción:** Actualiza todos los campos de un libro existente\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Actualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"titulo\": \"IT (Eso)\",\r\n    \"resumen\": \"En el pueblo de Derry, Maine, siete adolescentes se unen para combatir a una fuerza maligna ancestral que adopta la forma de un payaso asesino y emerge cada 27 años para alimentarse.\",\r\n    \"isbn\": \"9788497593793\",\r\n    \"anio_publicacion\": 1986,\r\n    \"autor\": 3,\r\n    \"editorial\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libros/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libros",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:08:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "362"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 7,\n    \"titulo\": \"IT (Eso)\",\n    \"resumen\": \"En el pueblo de Derry, Maine, siete adolescentes se unen para combatir a una fuerza maligna ancestral que adopta la forma de un payaso asesino y emerge cada 27 años para alimentarse.\",\n    \"isbn\": \"9788497593793\",\n    \"anio_publicacion\": 1986,\n    \"autor\": 3,\n    \"editorial\": 3,\n    \"autor_nombre\": \"Mario Vargas Llosa\",\n    \"editorial_nombre\": \"Alfaguara\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `DELETE /api/libros/{id}/`\n    \n- **Descripción:** Elimina un libro del sistema\n    \n- **Restricción:** No se puede eliminar si tiene préstamos asociados\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Eliminar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libros/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libros",
+										"7",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Miembros",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n{{urls}}/miembros/\n\n- **URL:** `GET /api/miembros/`\n    \n- **Descripción:** Obtiene una lista de todos los miembros registrados\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/miembros/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"miembros",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `POST /api/miembros/`\n    \n- **Descripción:** Registra un nuevo miembro en la biblioteca\n    \n- **Errores posibles:**\n    \n    - **400 Bad Request:** Email duplicado o formato inválido\n        \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Crear",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Roberto\",\r\n    \"apellido\": \"Silva\",\r\n    \"email\": \"roberto.silva@email.com\",\r\n    \"fecha_membresia\": \"2024-03-15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/miembros/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"miembros",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 07 Sep 2025 23:58:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "111"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 6,\n    \"nombre\": \"Roberto\",\n    \"apellido\": \"Silva\",\n    \"email\": \"roberto.silva@email.com\",\n    \"fecha_membresia\": \"2025-09-07\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `PUT /api/miembros/{id}/`\n    \n- **Descripción:** Actualiza todos los campos de un miembro existente\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Actualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombre\": \"Roberto\",\r\n    \"apellido\": \"Silva Gomez\",\r\n    \"email\": \"roberto.silva@email.com\",\r\n    \"fecha_membresia\": \"2024-03-15\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/miembros/6/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"miembros",
+										"6",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:00:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 6,\n    \"nombre\": \"Roberto\",\n    \"apellido\": \"Silva Gomez\",\n    \"email\": \"roberto.silva@email.com\",\n    \"fecha_membresia\": \"2025-09-07\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `DELETE /api/miembros/{id}/`\n    \n- **Descripción:** Elimina un miembro del sistema\n    \n- **Restricción:** No se puede eliminar si tiene préstamos activos\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Eliminar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/miembros/4/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"miembros",
+										"4",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Prestamos",
+			"item": [
+				{
+					"name": "Listar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urls}}/prestamos/",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"prestamos",
+								""
+							]
+						},
+						"description": "StartFragment\n\n{{urls}}/prestamos/\n\n- **URL:** `GET /api/prestamos/`\n    \n- **Descripción:** Obtiene una lista de todos los préstamos con información de libro y miembro\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Listar",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/prestamos/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"prestamos",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:11:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "280"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": \"2024-02-15\",\n        \"libro\": 1,\n        \"miembro\": 1\n    },\n    {\n        \"id\": 2,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": \"2024-03-10\",\n        \"libro\": 3,\n        \"miembro\": 2\n    },\n    {\n        \"id\": 5,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": \"2024-08-01\",\n        \"libro\": 4,\n        \"miembro\": 5\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Crear",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urls}}/prestamos/1/",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"prestamos",
+								"1",
+								""
+							]
+						},
+						"description": "StartFragment\n\n- **URL:** `POST /api/prestamos/`\n    \n- **Descripción:** Registra un nuevo préstamo de libro\n    \n- **Errores posibles:**  \n      \n    \n    - **400 Bad Request:** Libro ya prestado (sin devolver), miembro o libro no existe\n        \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Crear",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/prestamos/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"prestamos",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "Actualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urls}}/prestamos/",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"prestamos",
+								""
+							]
+						},
+						"description": "StartFragment\n\n- **URL:** `PATCH /api/prestamos/{id}/`\n    \n- **Descripción:** Actualiza un préstamo, típicamente para marcar la fecha de devolución\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Actualizar",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fecha_prestamo\": \"2024-08-10\",\r\n    \"fecha_devolucion\": null,\r\n    \"libro\": 2,\r\n    \"miembro\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/prestamos/7/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"prestamos",
+										"7",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:14:32 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "84"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"id\": 7,\n    \"fecha_prestamo\": \"2025-09-07\",\n    \"fecha_devolucion\": null,\n    \"libro\": 2,\n    \"miembro\": 1\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "StartFragment\n\n- **URL:** `DELETE /api/prestamos/{id}/`\n    \n- **Descripción:** Elimina un registro de préstamo del sistema\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Eliminar",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/prestamos/5/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"prestamos",
+										"5",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": "",
+							"header": [],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Filtros",
+			"item": [
+				{
+					"name": "Filtrar libro por id autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urls}}/libros/?autor=1",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"libros",
+								""
+							],
+							"query": [
+								{
+									"key": "autor",
+									"value": "1"
+								}
+							]
+						},
+						"description": "StartFragment\n\n- **URL:** `GET /api/libros/?autor={id_autor}`\n    \n- **Descripción:** Obtiene todos los libros escritos por un autor específico usando su ID\n    \n- **Parámetro:**\n    \n    - `autor`: ID numérico del autor\n        \n- GET /api/libros/?autor=1\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Filtrar libro por id autor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libros/?autor=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libros",
+										""
+									],
+									"query": [
+										{
+											"key": "autor",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:16:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "786"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"Cien años de soledad\",\n        \"resumen\": \"La historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo. Una obra maestra del realismo mágico que narra la soledad, el amor y la historia de América Latina.\",\n        \"isbn\": \"9788497592208\",\n        \"anio_publicacion\": 1967,\n        \"autor\": 1,\n        \"editorial\": 1,\n        \"autor_nombre\": \"Gabriel García Márquez\",\n        \"editorial_nombre\": \"Planeta\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"El amor en los tiempos del cólera\",\n        \"resumen\": \"La historia de amor entre Florentino Ariza y Fermina Daza, que se extiende por más de cincuenta años. Una reflexión sobre el amor, el tiempo y la persistencia.\",\n        \"isbn\": \"9788497592215\",\n        \"anio_publicacion\": 1985,\n        \"autor\": 1,\n        \"editorial\": 2,\n        \"autor_nombre\": \"Gabriel García Márquez\",\n        \"editorial_nombre\": \"Penguin Random House\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Filtrar libro por editorial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urls}}/libros/?editorial=1",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"libros",
+								""
+							],
+							"query": [
+								{
+									"key": "editorial",
+									"value": "1"
+								}
+							]
+						},
+						"description": "StartFragment\n\n- **URL:** `GET /api/libros/?editorial={id_editorial}`\n    \n- **Descripción:** Obtiene todos los libros publicados por una editorial específica usando su ID\n    \n- **Parámetro:**\n    \n    - `editorial`: ID numérico de la editorial\n        \n- GET /api/libros/?editorial=1\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Filtrar libro por editorial",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libros/?editorial=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libros",
+										""
+									],
+									"query": [
+										{
+											"key": "editorial",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:16:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "401"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"Cien años de soledad\",\n        \"resumen\": \"La historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo. Una obra maestra del realismo mágico que narra la soledad, el amor y la historia de América Latina.\",\n        \"isbn\": \"9788497592208\",\n        \"anio_publicacion\": 1967,\n        \"autor\": 1,\n        \"editorial\": 1,\n        \"autor_nombre\": \"Gabriel García Márquez\",\n        \"editorial_nombre\": \"Planeta\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Filtrar por nombre de autor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urls}}/libros/?autor_nombre=gabriel",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"libros",
+								""
+							],
+							"query": [
+								{
+									"key": "autor_nombre",
+									"value": "gabriel"
+								}
+							]
+						},
+						"description": "StartFragment\n\n- **URL:** `GET /api/libros/?autor_nombre={nombre}`\n    \n- **Descripción:** Busca libros por el nombre del autor (búsqueda parcial, insensible a mayúsculas)\n    \n- **Parámetro:**\n    \n    - `autor_nombre`: Texto a buscar en el nombre del autor\n        \n- GET /api/libros/?autor_nombre=gabrielGET /api/libros/?autor_nombre=GarcíaGET /api/libros/?autor_nombre=mario\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Filtrar por nombre de autor",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/libros/?autor_nombre=gabriel",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"libros",
+										""
+									],
+									"query": [
+										{
+											"key": "autor_nombre",
+											"value": "gabriel"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:21:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "786"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "[\n    {\n        \"id\": 1,\n        \"titulo\": \"Cien años de soledad\",\n        \"resumen\": \"La historia de la familia Buendía a lo largo de siete generaciones en el pueblo ficticio de Macondo. Una obra maestra del realismo mágico que narra la soledad, el amor y la historia de América Latina.\",\n        \"isbn\": \"9788497592208\",\n        \"anio_publicacion\": 1967,\n        \"autor\": 1,\n        \"editorial\": 1,\n        \"autor_nombre\": \"Gabriel García Márquez\",\n        \"editorial_nombre\": \"Planeta\"\n    },\n    {\n        \"id\": 2,\n        \"titulo\": \"El amor en los tiempos del cólera\",\n        \"resumen\": \"La historia de amor entre Florentino Ariza y Fermina Daza, que se extiende por más de cincuenta años. Una reflexión sobre el amor, el tiempo y la persistencia.\",\n        \"isbn\": \"9788497592215\",\n        \"anio_publicacion\": 1985,\n        \"autor\": 1,\n        \"editorial\": 2,\n        \"autor_nombre\": \"Gabriel García Márquez\",\n        \"editorial_nombre\": \"Penguin Random House\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Filtrar préstamos por miembro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urls}}/prestamos/?miembro=1",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"prestamos",
+								""
+							],
+							"query": [
+								{
+									"key": "miembro",
+									"value": "1"
+								}
+							]
+						},
+						"description": "StartFragment\n\n- **URL:** `GET /api/prestamos/?miembro={id_miembro}`\n    \n- **Descripción:** Obtiene todos los préstamos (históricos y actuales) de un miembro específico\n    \n- **Parámetro:**\n    \n    - `miembro`: ID numérico del miembro\n        \n- GET /api/prestamos/?miembro=1\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Filtrar préstamos por miembro",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/prestamos/?miembro=1",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"prestamos",
+										""
+									],
+									"query": [
+										{
+											"key": "miembro",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:18:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "179"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": \"2024-02-15\",\n        \"libro\": 1,\n        \"miembro\": 1\n    },\n    {\n        \"id\": 7,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": null,\n        \"libro\": 2,\n        \"miembro\": 1\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Filtrar préstamos por fecha",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{urls}}/prestamos/?fecha_prestamo=2024-09-07",
+							"host": [
+								"{{urls}}"
+							],
+							"path": [
+								"prestamos",
+								""
+							],
+							"query": [
+								{
+									"key": "fecha_prestamo",
+									"value": "2024-09-07"
+								}
+							]
+						},
+						"description": "StartFragment\n\n- **URL:** `GET /api/prestamos/?fecha_prestamo={fecha}`\n    \n- **Descripción:** Obtiene todos los préstamos realizados en una fecha específica\n    \n- **Parámetro:**\n    \n    - `fecha_prestamo`: Fecha en formato YYYY-MM-DD\n        \n- GET /api/prestamos/?fecha_prestamo=2024-08-15\n    \n\nEndFragment"
+					},
+					"response": [
+						{
+							"name": "Filtrar préstamos por fecha",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/prestamos/?fecha_prestamo=2025-09-07",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"prestamos",
+										""
+									],
+									"query": [
+										{
+											"key": "fecha_prestamo",
+											"value": "2025-09-07"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Mon, 08 Sep 2025 00:19:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, Cookie"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": \"2024-02-15\",\n        \"libro\": 1,\n        \"miembro\": 1\n    },\n    {\n        \"id\": 7,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": null,\n        \"libro\": 2,\n        \"miembro\": 1\n    },\n    {\n        \"id\": 2,\n        \"fecha_prestamo\": \"2025-09-07\",\n        \"fecha_devolucion\": \"2024-03-10\",\n        \"libro\": 3,\n        \"miembro\": 2\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
